@@ -12,6 +12,4 @@ ADD entrypoint.sh /
 
 VOLUME /data
 
-EXPOSE 1080 1443
-
 ENTRYPOINT ["/entrypoint.sh"]
