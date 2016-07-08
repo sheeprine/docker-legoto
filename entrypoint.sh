@@ -20,7 +20,7 @@ create_cert() {
 }
 
 renew_cert() {
-    $LEGO_BIN $COMMON_PARAMS --days $DAYS -d $1 renew
+    $LEGO_BIN $COMMON_PARAMS -d $1 renew --days $DAYS
 }
 
 for cert in $@; do
