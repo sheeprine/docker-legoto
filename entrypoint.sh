@@ -16,7 +16,7 @@ check_cert() {
 }
 
 create_cert() {
-    $LEGO_BIN $COMMON_PARAMS -d $1 -a run
+    $LEGO_BIN $COMMON_PARAMS -d $1 run
 }
 
 renew_cert() {
