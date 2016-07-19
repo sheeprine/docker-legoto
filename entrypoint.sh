@@ -4,10 +4,12 @@
 DATADIR="/data"
 WEBROOT="/webroot"
 LEGO_BIN="/usr/bin/lego"
-COMMON_PARAMS="--http :$HTTP_PORT --tls :$TLS_PORT --path $DATADIR -m $NOTIF_MAIL -a"
+COMMON_PARAMS="--path $DATADIR -m $NOTIF_MAIL -a"
 
 if [ -d $WEBROOT ]; then
     COMMON_PARAMS="$COMMON_PARAMS --webroot $WEBROOT"
+else
+    COMMON_PARAMS="$COMMON_PARAMS --http :$HTTP_PORT --tls :$TLS_PORT"
 fi
 
 check_cert() {
